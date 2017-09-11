@@ -1,13 +1,13 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdlib.h>  // lib for atof
+#include <string.h>  // for atof too
 
 
 int main(int argc, char* argv[])
 {
 	double tempr;
-	tempr = atof(argv[1]);
-	if(argc == 2)
+	tempr = atof(argv[1]); // char to double
+	if(argc == 2) // input without scale
 	{
 		printf("%s", argv[1]);
 		printf(" C:\n");
@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
 		printf(" F\n");
 	}
 
-	if(argc == 3)
+	if(argc == 3) // input with scale
 	{
 		char name = *argv[2];
 		if(name == 'C')
